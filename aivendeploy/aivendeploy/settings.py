@@ -11,7 +11,11 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
-from dotenv import load_dotenv
+
+
+from dotenv import load_dotenv  # type: ignore
+
+
 import os 
 
 load_dotenv() #this will loads all the variables from env to here 
@@ -29,7 +33,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['aivendeployproject.onrender.com','localhost']
+ALLOWED_HOSTS = ['aivendeployproject.onrender.com','127.0.0.1']
 
 
 # Application definition
